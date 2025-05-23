@@ -1,5 +1,106 @@
+
+/* 
+seletor (QUEM EU QUERO ALTERAR)
+propriedade (O QUE VOU ALETERA)
+*/
+
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body{
+    padding: 20px 100px; 
+}
+
+.conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+
+.big-glass {    
+    width: 340px;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    position: relative;
+
+}
+
+.box-texto{
+    width: 600px;
+
+    & h1 {
+        color: #333;
+        font-size: 60px;
+        font-weight: bold;
+
+        & span {
+            color:  #017143;
+            font-size: 70px;
+            position: relative; 
+        }
+    }
+
+    & p {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    & button {
+        background-color: #017143;
+        color: #FFF;
+        border-radius: 40px; 
+        border: none;
+        padding: 10px;
+        margin: 20px;
+        cursor: pointer;
+        transition: 0.5s;
+        
+
+        &:hover {
+            background-color: #033520;
+            transform: scale(1.05);
+        }
+    }
+
+}
+
+.box-img{
+    width: 600px;
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+
+    & .btn-menu {
+        width: 60px ;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover{    
+            transform: translateY(-20px);
+        }
+    }
+}
+
+
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top:30px
+    }
 }
